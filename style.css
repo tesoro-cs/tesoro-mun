@@ -3,6 +3,10 @@ body {
     margin: 0px;
     font-family: 'Open Sans', sans-serif;
 }
+h2, h3, h4{
+    text-align: center;
+    margin: 5px;
+}
 .logo{
     margin-left:20px;
     height:70px;
@@ -14,9 +18,12 @@ body {
     text-align: left;
     transition:.2s;
 }
+.wrapper{
+    margin: 0px 10%;
+}
 .navbar{
     position:fixed;
-    height:80px;
+    height:100px;
     z-index:1000;
     width:100%;
     display:flex;
@@ -59,19 +66,19 @@ body {
 }
 .colored{
     background-color: #152349;
-    height: 60px;
+    height: 80px;
 }
 .colored > a > img{
-    height:50px;
+    height: 60px;
 }
 .colored > *, .colored > * > *{
-    color: black;
+    color: white;
 }
 #banner{
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    filter: brightness(0.7);
+    filter: brightness(0.6);
 }
 #page-title{
     position: absolute;
@@ -134,4 +141,89 @@ body {
     text-align: center;
     color: #ededed;
     padding: 16px;
+}
+footer{
+    height: 100px;
+    background-color: #40444f;
+    margin-top: 30px;
+    padding: 20px;
+}
+.footer-icons{
+    text-align: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    width: 120px;
+    float: right;
+}
+.footer-icons img{
+    text-align: right;
+    max-height: 50px;
+    max-width: 50px;
+    transition: 0.2s;
+}
+.footer-icons img:hover{
+    filter: brightness(.8);
+}
+.leaders{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.leader{
+    width: 250px;
+    min-width: 200px; 
+}
+.leader > img{
+    max-width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section{
+    margin-top: 40px;
+}
+.wrapper > p{
+    margin-bottom: 30px;
+}
+.button{
+    color: black;
+    transition: .3s;
+    text-decoration: none;
+    border: 3px solid #152349;
+    padding: 8px 12px;
+    margin: 20px;
+}
+.button:hover, .button:focus{
+    color: white;
+    background-color: #152349
+}
+.advisor{
+    color: white;
+    float:left;
+}
+.advisor > p{
+    margin: 8px 0px;
+}
+@media only screen and (max-width: 500px){
+    .advisor{
+        float:none;
+        text-align: center;
+        margin: 0px;
+    }
+    .footer-icons{
+        float: none;
+        justify-content: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    footer{
+        height: auto;
+    }
 }

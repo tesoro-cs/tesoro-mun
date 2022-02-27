@@ -56,6 +56,9 @@ h2, h3, h4{
 .menu-item:hover{
     opacity: 0.5;
 }
+.menu-item#hamburger:focus{
+    opacity: 1;
+}
 .logo{
     color: white;
     font-weight: bold;

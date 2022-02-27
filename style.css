@@ -145,7 +145,7 @@ h2, h3, h4{
 footer{
     height: 100px;
     background-color: #40444f;
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 20px;
 }
 .footer-icons{
@@ -179,17 +179,27 @@ footer{
     width: 250px;
     min-width: 200px; 
 }
-.leader > img{
+.leader > div{
     max-width: 70%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    transition: .3s;
+    overflow: hidden;
+}
+.leader > div > img{
+    width: 100%;
+    border-radius: 10px;
+}
+.leader > div:hover{
+    cursor: pointer;
+    filter: brightness(0.6);
 }
 .section{
     margin-top: 40px;
 }
 .wrapper > p{
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 .button{
     color: black;
@@ -198,6 +208,7 @@ footer{
     border: 3px solid #152349;
     padding: 8px 12px;
     margin: 20px;
+    border-radius: 8px;
 }
 .button:hover, .button:focus{
     color: white;
@@ -206,6 +217,9 @@ footer{
 .advisor{
     color: white;
     float:left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .advisor > p{
     margin: 8px 0px;
@@ -226,4 +240,14 @@ footer{
     footer{
         height: auto;
     }
+}
+tr{
+    width: 100%;
+}
+td{
+    width: 33%;
+    text-align: center;
+}
+table{
+    width: 100%;
 }

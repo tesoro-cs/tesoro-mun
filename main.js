@@ -10,3 +10,21 @@ window.setInterval(function() {
         }
     }
 },100);
+
+let x = document.getElementsByClassName("leader");
+for (var i = 0; i < x.length; i++){
+    x[i].childNodes[5].childNodes[0].addEventListener("click", function(e){
+        if (e.target.id =="contact-isa"){
+            window.location="mailto:test@test.com";
+        }
+        else if (e.target.id =="contact-gabriel"){
+            window.location="mailto:test@test.com";
+        }
+        else if (e.target.id =="contact-daniel"){
+            window.location="mailto:test@test.com";
+        }
+        else if (e.target.id =="contact-armin"){
+            window.location="mailto:test@test.com";
+        }
+    });
+}

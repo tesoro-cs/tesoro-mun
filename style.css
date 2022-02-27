@@ -134,18 +134,16 @@ h2, h3, h4{
     margin: auto;
     width: 75%;
     background-color: #152349;
-    height:max-content;
+    box-sizing: border-box;
 }
 
 #slidecontainer {
-    height: 70%;
-    min-height: 70%;
+    height: max-content;
 }
 
 .slide{
     display: none;
-object-fit:contain;
-max-height: 100%;
+    height: 100%;
 }
 
 .slide > img {

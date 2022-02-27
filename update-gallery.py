@@ -4,11 +4,6 @@ import os
 galleryFile = open("gallery/gallery.html", "r")
 galleryFile = bs4(galleryFile, features="html.parser")
 
-directory = "/gallery/imgs"
-for i, name in enumerate(os.listdir(directory)):
-    extension = name.split(".")
-    extension = "." + extension[len(extension)-1]
-    os.rename(directory + name, directory + str(i) + extension)
 # i=1
 # for img in range(1,10):
 #     insert = galleryFile.find(id="insert")
@@ -20,6 +15,13 @@ for i, name in enumerate(os.listdir(directory)):
 #     newImgDiv["id"] = i
 #     print(newImgDiv)
 #     i+=1
+
+directory = "./gallery/imgs/"
+for i, name in enumerate(os.listdir(directory)):
+    extension = name.split(".")
+    extension = "." + extension[len(extension)-1]
+    os.rename(directory + name, directory + str(i) + extension)
+
 
 # <div class="slide"><img src="imgs/logo.png"></div>
 

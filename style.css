@@ -99,10 +99,20 @@ h2, h3, h4{
 
 .gallery{
     position: relative;
+    margin: auto;
+    width: 75%;
+    background-color: #152349;
+}
+
+#slidecontainer{
+    height: 100%;
+    width: 100%;
 }
 
 .slide{
     display: none;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .thumbnail{
@@ -121,7 +131,8 @@ h2, h3, h4{
     margin-top: -50px;
     color: #ededed;
     font-size: 25px;
-    border-radius: 0 5px 5px 0;
+    font-weight: bold;
+    
 }
 
 .next:hover, .prev:hover{
@@ -130,14 +141,15 @@ h2, h3, h4{
 
 .next{
     right: 0%;
+    border-radius: 10px 0 0 10px;
 }
 
 .prev{
     left: 0%;
+    border-radius: 0 10px 10px 0;
 }
 
 #caption{
-    background-color: rgba(0, 0, 0, 0.9);
     text-align: center;
     color: #ededed;
     padding: 16px;

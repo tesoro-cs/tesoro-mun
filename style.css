@@ -16,7 +16,7 @@ h2, h3, h4{
     transform:translateY(-50%);
     cursor:pointer;
     text-align: left;
-    transition:.3s;
+    transition:.2s;
 }
 .wrapper{
     margin: 0px 10%;
@@ -43,7 +43,7 @@ h2, h3, h4{
     position:relative;
     text-decoration:none;
     padding: 12px 8px;
-    transition: .3s;
+    transition: .2s;
 }
 .navbar>div{
     position:absolute;
@@ -55,9 +55,6 @@ h2, h3, h4{
 }
 .menu-item:hover{
     opacity: 0.5;
-}
-.menu-item#hamburger:focus{
-    opacity: 1;
 }
 .logo{
     color: white;
@@ -93,6 +90,9 @@ h2, h3, h4{
         flex-direction: column;
         align-items: center;
         transition: .3s;
+    }
+    .gallery{
+        width: 100% !important;
     }
 }
 
@@ -134,17 +134,43 @@ h2, h3, h4{
     margin: auto;
     width: 75%;
     background-color: #152349;
+    height:max-content;
 }
 
+#slidecontainer {
+    height: 70%;
+    min-height: 70%;
+}
 
 .slide{
     display: none;
-    max-height: 100%;
+object-fit:contain;
+max-height: 100%;
+}
+
+.slide > img {
     max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thumbscontainer {
+    height: 100px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.thumbs {
+    width: fit-content;
+    height: 100px;
+    display: flex;
 }
 
 .thumbnail{
     height: 100px;
+    float: left;
 }
 
 .pointer{
@@ -154,13 +180,14 @@ h2, h3, h4{
 .next, .prev{
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     width: auto;
     padding: 15px;
     margin-top: -50px;
     color: #ededed;
     font-size: 25px;
     font-weight: bold;
-    
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .next:hover, .prev:hover{
@@ -204,7 +231,7 @@ footer{
     text-align: right;
     max-height: 50px;
     max-width: 50px;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 .footer-icons img:hover{
     filter: brightness(.8);
@@ -233,7 +260,7 @@ footer{
 }
 .leader > div:hover{
     cursor: pointer;
-    filter: brightness(0.8);
+    filter: brightness(0.6);
 }
 .section{
     margin-top: 40px;

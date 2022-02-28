@@ -138,7 +138,7 @@ h2, h3, h4{
 }
 
 #slidecontainer {
-    height: max-content;
+    height: 400px;
 }
 
 .slide{
@@ -151,7 +151,8 @@ h2, h3, h4{
     max-height: 100%;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .thumbscontainer {

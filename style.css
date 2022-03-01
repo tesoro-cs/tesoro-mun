@@ -273,8 +273,9 @@ footer{
     text-decoration: none;
     border: 3px solid #152349;
     padding: 8px 12px;
-    margin: 20px;
+    margin: 10px;
     border-radius: 8px;
+    display: inline-flex;
 }
 .button:hover, .button:focus{
     color: white;
@@ -316,4 +317,7 @@ td{
 }
 table{
     width: 100%;
+}
+li{
+    margin-top: 15px;
 }

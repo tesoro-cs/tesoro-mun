@@ -17,10 +17,27 @@ galleryFile = bs4(galleryFile, features="html.parser")
 #     i+=1
 
 directory = "./gallery/imgs/"
+count = 0
+files = []
 for i, name in enumerate(os.listdir(directory)):
     extension = name.split(".")
     extension = "." + extension[len(extension)-1]
-    os.rename(directory + name, directory + str(i) + extension)
+    filename = directory + str(i+1) + extension
+    os.rename(directory + name, filename)
+    count+=1
+    files.append(filename)
+
+
+# slides = galleryFile.find_all(class_="slide")
+insert = galleryFile.find(id="insert")
+for i in range(1,count+1):
+    newImgDiv = galleryFile.new_tag("div")
+    newImgDiv["class"] = "slide"
+    newImgDiv["id"] = i
+    newImg = galleryFile.new_tag("img")
+    newImg["src"] = "imgs/" + files[i]
+    newImgDiv.contents = newImg
+    newImgDiv.insert_after(insert)
 
 
 # <div class="slide"><img src="imgs/logo.png"></div>

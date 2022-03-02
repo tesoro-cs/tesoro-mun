@@ -29,16 +29,23 @@ for i, name in enumerate(os.listdir(directory)):
 
 
 # slides = galleryFile.find_all(class_="slide")
-insert = galleryFile.find(id="insert")
+# insert = galleryFile.find(id="insert")
+container = galleryFile.find(id="slidecontainer")
 for i in range(1,count+1):
     newImgDiv = galleryFile.new_tag("div")
     newImgDiv["class"] = "slide"
     newImgDiv["id"] = i
     newImg = galleryFile.new_tag("img")
-    newImg["src"] = "imgs/" + files[i]
-    newImgDiv.contents = newImg
-    newImgDiv.insert_after(insert)
-
+    newImg["src"] = "imgs/" + files[i-1]
+    newImgDiv.append(newImg)
+    # newImgDiv.contents = newImg
+    # newImgDiv.insert_after(insert)
+    print(newImgDiv)
+    container.append(newImgDiv)
+print(galleryFile)
+file = open("gallery/gallery.html", "wb")
+file.write(galleryFile.prettify("utf-8"))
+file.close
 
 # <div class="slide"><img src="imgs/logo.png"></div>
 

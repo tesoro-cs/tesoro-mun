@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <title>Tesoro MUN</title>
+        <link rel="icon" href="../icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="navbar" id="navigation" >
+                <a href="index.html"><img href="#" class="logo logo-large" src="../logo.png"/></a>>
+                <div class="menu-items">
+                    <a class="menu-item" href="../index.html">Home</a>
+                    <a class="menu-item" href="../about/about.html">About Us</a>
+                    <a class="menu-item" href="../committees/committees.html">Committees</a>
+                    <a class="menu-item" href="#">Gallery</a>
+                    <a class="menu-item" href="../register/register.html">Register</a>
+                </div>
+            </div>
+        </header>
+        <img id="banner" src="../banner.jpg"/>
+        <h1 id="page-title">Gallery</h1>
+
+
+
+        <h1 style="text-align: center;">Gallery</h1>
+        <div class="gallery">
+            <div id="slidecontainer">
+                <div class="slide" id="1"><img src="imgs/1.jpg"></div>
+<!--            <div class="slide" id="2"><img src="imgs/2.png"></div>-->
+<!--            <div class="slide" id="3"><img src="imgs/1.jpg"></div>-->
+<!--            <div class="slide" id="4"><img src="imgs/2.png"></div>-->
+            </div>
+            <!-- Next/prev -->
+            <a class="prev pointer" onclick="prev()">&lt</a>
+            <a class="next pointer" onclick="next()">&gt</a>
+            <!-- Caption -->
+            <p id="caption">Caption</p>
+
+            <!-- Thumbnails -->
+            <!-- Each image should have a corresponding thumbnail that runs "show(<image number>)" on click -->
+            <!-- Image captions are stored in the alt attributes of their corresponding thumbnail -->
+            <img class="thumbnail pointer" src="imgs/1.jpg" alt="1" onclick="show(1)">
+<!--            <img class="thumbnail pointer" src="imgs/2.png" alt="2" onclick="show(2)">-->
+<!--            <img class="thumbnail pointer" src="imgs/1.jpg" alt="3" onclick="show(3)">-->
+<!--            <img class="thumbnail pointer" src="imgs/2.png" alt="4" onclick="show(4)">-->
+        </div>
+        <script src="../main.js"></script>
+        <script src="gallery.js"></script>
+    <!--            <div id="insert" style="display: none;">USED FOR ADDING IMAGES - DO NOT REMOVE</div>-->
+    </body>
+</html>

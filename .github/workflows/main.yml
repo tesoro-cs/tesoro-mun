@@ -26,7 +26,7 @@ jobs:
       - name: Install bs4 and run script
         run: |
           pip install bs4
-          python ./../../update-gallery.py
+          python ./update-gallery.py
 
       - name: echo
         run: echo Committing to repo

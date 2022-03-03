@@ -30,18 +30,28 @@ for i, name in enumerate(os.listdir(directory)):
 
 # slides = galleryFile.find_all(class_="slide")
 # insert = galleryFile.find(id="insert")
-container = galleryFile.find(id="slidecontainer")
+slidecontainer = galleryFile.find(id="slidecontainer")
+slidecontainer.clear()
+thumbcontainer = galleryFile.find(id="thumbcontainer")
+thumbcontainer.clear()
 for i in range(1,count+1):
     newImgDiv = galleryFile.new_tag("div")
     newImgDiv["class"] = "slide"
     newImgDiv["id"] = i
     newImg = galleryFile.new_tag("img")
-    newImg["src"] = "imgs/" + files[i-1]
+    src = files[i-1].split("/")
+    src = "imgs/" + src[len(src)-1]
+    newImg["src"] = src
     newImgDiv.append(newImg)
-    # newImgDiv.contents = newImg
-    # newImgDiv.insert_after(insert)
     print(newImgDiv)
-    container.append(newImgDiv)
+    slidecontainer.append(newImgDiv)
+#     Adding thumbnail
+    newThumb = galleryFile.new_tag("img")
+    newThumb["class"] = "thumbnail"
+    newThumb["src"] = src
+    newThumb["alt"] = str(i)
+    newThumb["onclick"] = "show(" + str(i) + ")"
+    thumbcontainer.append(newThumb)
 print(galleryFile)
 file = open("gallery/gallery.html", "wb")
 file.write(galleryFile.prettify("utf-8"))

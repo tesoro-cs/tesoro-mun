@@ -38,4 +38,4 @@ jobs:
           git status
           git add .
           git commit -m "Auto-populate gallery"
-          git push origin master
+          git push origin main

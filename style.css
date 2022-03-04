@@ -169,7 +169,7 @@ h2, h3, h4{
 
 .thumbnail{
     height: 100px;
-    float: left;
+    cursor: pointer;
 }
 
 .pointer{

@@ -19,7 +19,7 @@ galleryFile = bs4(galleryFile, features="html.parser")
 directory = "./gallery/imgs/"
 count = 0
 files = []
-for i, name in enumerate(os.listdir(directory)):
+for i, name in enumerate(sorted(os.listdir(directory))):
     extension = name.split(".")
     extension = "." + extension[len(extension)-1]
     filename = directory + str(i+1) + extension

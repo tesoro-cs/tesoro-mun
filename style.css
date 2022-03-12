@@ -209,7 +209,7 @@ h2, h3, h4{
     padding: 5px;
 }
 footer{
-    height: 100px;
+    height: 150px;
     background-color: #40444f;
     margin-top: 40px;
     padding: 20px;
@@ -287,6 +287,7 @@ footer{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    max-width:70%;
 }
 .advisor > p{
     margin: 8px 0px;
@@ -296,6 +297,8 @@ footer{
         float:none;
         text-align: center;
         margin: 0px;
+        max-width:100%;
+        transform:translate(0);
     }
     .footer-icons{
         float: none;
@@ -320,4 +323,8 @@ table{
 }
 li{
     margin-top: 15px;
+}
+footer a{
+    text-decoration: none;
+    color: #5badff;
 }

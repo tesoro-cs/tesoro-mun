@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup as bs4
 import os
 
-galleryFile = open("gallery/gallery.html", "r")
+galleryFile = open("gallery/index.html", "r")
 galleryFile = bs4(galleryFile, features="html.parser")
 
 # i=1
@@ -53,7 +53,7 @@ for i in range(1,count+1):
     newThumb["onclick"] = "show(" + str(i) + ")"
     thumbcontainer.append(newThumb)
 print(galleryFile)
-file = open("gallery/gallery.html", "wb")
+file = open("gallery/index.html", "wb")
 file.write(galleryFile.prettify("utf-8"))
 file.close
 

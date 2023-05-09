@@ -382,3 +382,7 @@ footer a{
     border-top: 2px solid black;
     width: 100%;
 }
+
+#team > p {
+    text-align: center;
+}

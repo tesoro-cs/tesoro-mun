@@ -258,8 +258,7 @@ footer{
     border-radius: 10px;
 }
 .leader > div:hover{
-    cursor: pointer;
-    filter: brightness(0.6);
+    filter: drop-shadow(3px 3px 2px #6d6d6d); 
 }
 .section{
     margin-top: 40px;

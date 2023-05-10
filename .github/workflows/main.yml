@@ -6,6 +6,7 @@ name: Gallery
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
+    branches: [ main ]
 #   pull_request:
 #     branches: [ main ]
   # Allows you to run this workflow manually from the Actions tab
@@ -37,4 +38,4 @@ jobs:
           git status
           git add .
           git commit -m "Auto-populate gallery"
-          git push
+          git push origin main

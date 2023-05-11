@@ -258,8 +258,7 @@ footer{
     border-radius: 10px;
 }
 .leader > div:hover{
-    cursor: pointer;
-    filter: brightness(0.6);
+    filter: drop-shadow(3px 3px 2px #6d6d6d); 
 }
 .section{
     margin-top: 40px;
@@ -381,4 +380,15 @@ footer a{
     border-bottom: 2px solid black;
     border-top: 2px solid black;
     width: 100%;
+}
+
+#team > p, #about > p {
+    text-align: center;
+}
+
+iframe#registration {
+    width: 100%;
+    height: 2500px;
+    border: none;
+    padding-top: 20px;
 }

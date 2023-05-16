@@ -1,15 +1,10 @@
-# Auto-populates images to gallery
+name: Build and deploy 
 
-name: Gallery
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - main
+
   workflow_dispatch:
 
 jobs:
@@ -17,25 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      - name: echo
-        run: echo Auto-populating images to gallery
+      - name: Checkout 🛎️
+        uses: actions/checkout@main
+        with:
+          persist-credentials: false
 
       - name: Install bs4 and run script
         run: |
           pip install bs4
           python ./update-gallery.py
 
-      - name: echo
-        run: echo Committing to repo
-
-      - name: Committing
-        run: |
-          git config user.name "Github Actions - Gallery Bot"
-          git config user.email "<>"
-          git status
-          git add .
-          git commit -m "Auto-populate gallery"
-          git push origin main
+      - name: Deploy to GH Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public

@@ -392,3 +392,22 @@ iframe#registration {
     border: none;
     padding-top: 20px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: auto;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    width: auto;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+  
